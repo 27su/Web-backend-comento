@@ -3,7 +3,7 @@
 
 ## 1주차
 
-1. JDK 1.8 설치
+### JDK 1.8 설치
 
 JDK 다운로드( 1.8 버전 )   
 
@@ -13,7 +13,7 @@ Path 변수 편집 : %JAVA_HOME%\bin으로 경로 추가
 
 cmd 창 : javac 실행하여 동작하는지 확인   
 
-2. Eclipse, Spring 다운로드 및 설치   
+### Eclipse, Spring 다운로드 및 설치   
 
 - Eclipse IDE for Java EE developers 설치 (아이콘 모양에서 Java EE IDE)   
 설치 완료 후 Eclipse.ini(eclipse 설치 경로에 존재)의 하단의 -vm C:\Program Files\Java\jdk1.8.0_221\bin\javaw.exe 추가   
@@ -26,7 +26,7 @@ Preferences - Web - JSP Files - Encoding : ISO 10646/Unicode(UTF-8)
 Help > Eclipse MarketPlace에서 STS 검색   
 Spring Tools 3 Add-On for Spring Tools 4.3.9.10-CI 설치   
 
-3. 톰캣 설정
+### 톰캣 설정
 
 Tomcat 9버전 다운로드 및 설치(경로 : eclipse와 동일)   
 
@@ -36,7 +36,7 @@ Name 설정 및 Browse에서 Tomcat의 경로 설정 후 Finish
 
 Eclipse 창에 Server 표시 : Window > Show View > Servers 클릭   
 
-4. Hello World 출력
+### Hello World 출력
 
 스프링 프로젝트 생성 (File > New > Other, Spring > Spring Legacy Project)   
 
@@ -50,7 +50,7 @@ eclipse 프로젝트에서 최하단의 pom.xml에서 스프링 버전/JDK 버�
 
 localhost:8080/프로젝트명/ 으로 접속하면 Hello world가 정상적으로 실행된다   
 
-5. mariaDB, mySql WorkBench 설치 및 샘플 DB 구축
+### mariaDB, mySql WorkBench 설치 및 샘플 DB 구축
 
 mariadb msi 다운로드 및 설치   
 
@@ -64,7 +64,7 @@ Create Shema 아이콘을 클릭하고 나온 Schema 내용을 설정 (Name : Th
 
 좌측 상단 메뉴에서 SQL Script 메뉴 클릭 후 INSERT SQL문을 작성하여 실행(번개표시 아이콘)하여 데이터 삽입   
 
-6. 스프링, Mariadb, MyBatis 연동, 데이터 조회
+### 스프링, Mariadb, MyBatis 연동, 데이터 조회
 
 pom.xml 수정 : mariadb, mybatis 관련 dependency 추가, log4jdbc-log4j2-jdbc4.1은 로그를 남기기 위한 라이브러리   
 
