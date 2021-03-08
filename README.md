@@ -84,6 +84,24 @@ SqlSessionTemplate는 트랜잭션 관리와 쓰레드 처리, DB연결 및 종�
 
 그 후 자바 코드 작성   
 
-Tomcat을 더블 클릭하고 URL 설정 부분의 path를 "/내용"dptj "/"로 변경하면 localhost:8080으로 바로 첫페이지 구동 가능   
+Tomcat을 더블 클릭하고 URL 설정 부분의 path를 "/내용"에서 "/"로 변경하면 localhost:8080으로 바로 첫페이지 구동 가능   
 
 ![image](https://user-images.githubusercontent.com/32132152/109476576-6d3aae00-7aba-11eb-9be9-e8a590e4bc7b.png)
+
+## 2주차
+
+### API 가이드 문서 초안 작성
+
+API 가이드 문서는 데이터를 어떻게 주고 받을 지에 대한 개발자간의 소통이다.   
+
+클라이언트(프론트엔드)개발자가 서버에 어떤 값을 넘기면 어떤 데이터를 응답해줄지에 대한 내용을 정의한다.   
+
+경우에따라 해당 데이터를 어떤 식으로 활용할 지 예시를 함께 작성하기도 한다. 그리고 어떤 데이터 포맷으로 응답할 지에 대한 예시도 문서로 함께 작성한다.   
+
+어떤 URL로 어떤 파라미터를 넘겼을 때 어떤 응답이 오는지 확인 할 수 있다. 
+
+해당 문서에서는 pathVariable 방식으로 응답을 요청하고, JSON 포맷으로 데이터를 응답하는 게 특징이다.  
+
+그리고 API의 특징은 HTTP 통신으로 이루어지고 있다는 점이다.   
+
+참고 : https://blog.naver.com/dktmrorl/222072210416 , https://not-null.tistory.com/26 , https://velog.io/@surim014/JSON%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80    
