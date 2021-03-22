@@ -105,3 +105,48 @@ API 가이드 문서는 데이터를 어떻게 주고 받을 지에 대한 개�
 그리고 API의 특징은 HTTP 통신으로 이루어지고 있다는 점이다.   
 
 참고 : https://blog.naver.com/dktmrorl/222072210416 , https://not-null.tistory.com/26 , https://velog.io/@surim014/JSON%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80    
+## 3주차   
+    
+### 스프링부트로 개발 환경 설정    
+   
+프로젝트 생성   
+File > New > Project > Spring Boot > Spring Starter Project   
+Type : Maven, Java Version : 8   
+group : com.devfun    
+artifact : settingweb_boot   
+dependencies : Spring Boot DevTools, Mybatis Framework, Spring Web   
+    
+Pom.xml 수정     
+부트 버전은 2.2.2.RELEASE로 변경    
+    
+application.properties 수정 (src/main/resources)    
+port, contextpaht, view, db 등 각종 설정을 한 곳에서 진행    
+suffix에 jsp를 줌으로써 /WEB-INF/views 아래에 jsp 파일로 자동으로 맵핑해주도록 한다.    
+    
+test.jsp와 settingTest.java로 기본 테스트 진행    
+    
+### 통계(SW활용현황) API를 위한 DB, Table 생성    
+    
+mysql workbench에서 DB, Table 생성문을 이용하여 DB, Table을 생성    
+데이터는 임의로 넣어 사용    
+    
+### 스프링부트, Mybatis, mariadb 연동
+     
+mybatis 설정 (MybatisConfig.java) : MapperScan 어노테이션을 활용하여 스캔할 패키지를 입력      
+     
+mapper 작성 (StatisticMapper.java, statisticMapper.xml) : statisticMapper.xml 안에 쿼리 정의      
+    
+Service 작성 (StatisticService.java, StatisticServiceImol.java) : JSON을 만들기 위해 HashMap 형태로 Return. Hash Map에 값을 year, is_success, 쿼리로 가져온 cnt 값으로 json 값을 만든다.      
+     
+URL : http://localhost:8031/sqlyearStatistic?year=20    
+조회하는 URL임으로 GET으로 조회를 하여 url에 parameter를 입력     
+그 결과로 json 구조의 값이 나옴 확인 가능       
+
+### SW 활용 현황 통계 API 구축을 위한 SQL 작성
+월별 접속자 수
+일자별 접속자 수
+평균 하루 로그인 수
+부서별 월별 로그인 수
+     
+휴일을 제외한 로그인 수 (API 구축시 추가 구현 필요 : 쿼리 + (별도의 db 생성 or 공공 API 활용))      
+     
