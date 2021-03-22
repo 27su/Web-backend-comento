@@ -8,5 +8,5 @@ public interface  StatisticMapper {
     public HashMap<String, Object> selectMonthLoginUser(String month);
     public HashMap<String, Object> selectDateLoginUser(String date);
     public HashMap<String, Object> avgDayLogin();
-    public HashMap<String, Object> selectDeptMonthLogin(String month);
+    public HashMap<String, Object> selectDeptMonthLogin(String month, String dept);
 }

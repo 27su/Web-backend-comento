@@ -7,5 +7,5 @@ public interface StatisticService {
     public HashMap<String,Object> monthloginuserNum (String month);
     public HashMap<String,Object> dateloginuserNum (String date);
     public HashMap<String,Object> avgdayloginNum ();
-    public HashMap<String,Object> deptmonthloginNum (String month);
+    public HashMap<String,Object> deptmonthloginNum (String month, String dept);
 }

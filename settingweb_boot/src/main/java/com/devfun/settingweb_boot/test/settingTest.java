@@ -48,9 +48,9 @@ public class settingTest {
     }
     @ResponseBody 
     @RequestMapping("/sqlDeptMonthLogin")
-    public Map<String, Object> sqldeptmonthlogin(String month) throws Exception{ 
+    public Map<String, Object> sqldeptmonthlogin(String month, String dept) throws Exception{ 
         
-        return service.deptmonthloginNum(month);
+        return service.deptmonthloginNum(month, dept);
     }
     
     @RequestMapping("/test") 

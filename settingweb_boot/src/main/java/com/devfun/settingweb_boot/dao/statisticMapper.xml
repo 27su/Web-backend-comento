@@ -31,7 +31,6 @@
     <select id="selectDeptMonthLogin" parameterType="string" resultType="hashMap">
         select count(*) as totCnt
         from statistc.requestinfo ri, statistc.user u
-        where ri.userID = u.userID and right(left(ri.createDate, 4),2) = #{month}
-        group by u.hr_organ;
+        where ri.userID = u.userID and right(left(ri.createDate, 4),2) = #{month} and u.hr_organ = #{dept};
     </select>
 </mapper>

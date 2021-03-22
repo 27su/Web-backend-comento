@@ -89,18 +89,20 @@ HashMap<String, Object> retVal = new HashMap<String,Object>();
 	}
 
 	@Override
-	public HashMap<String, Object> deptmonthloginNum(String month) {
+	public HashMap<String, Object> deptmonthloginNum(String month, String dept) {
 		// TODO Auto-generated method stub
 		HashMap<String, Object> retVal = new HashMap<String,Object>();
         
         try {
-            retVal = uMapper.selectDeptMonthLogin(month);
+            retVal = uMapper.selectDeptMonthLogin(month, dept);
             retVal.put("month", month);
+            retVal.put("dept", dept);
             retVal.put("is_success", true);
             
         }catch(Exception e) {
             retVal.put("totCnt", -999);
             retVal.put("month", month);
+            retVal.put("dept", dept);
             retVal.put("is_success", false);
         }
         
