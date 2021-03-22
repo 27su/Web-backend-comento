@@ -42,9 +42,9 @@ public class settingTest {
     }
     @ResponseBody 
     @RequestMapping("/sqlavgDayLogin")
-    public Map<String, Object> sqlavgdayloginNum(String date) throws Exception{ 
+    public Map<String, Object> sqlavgdayloginNum() throws Exception{ 
         
-        return service.avgdayloginNum(date);
+        return service.avgdayloginNum();
     }
     @ResponseBody 
     @RequestMapping("/sqlDeptMonthLogin")

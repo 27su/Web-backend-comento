@@ -72,18 +72,16 @@ public class StatisticServiceImpl implements StatisticService {
 	}
 
 	@Override
-	public HashMap<String, Object> avgdayloginNum(String date) {
+	public HashMap<String, Object> avgdayloginNum() {
 		// TODO Auto-generated method stub
 HashMap<String, Object> retVal = new HashMap<String,Object>();
         
         try {
-            retVal = uMapper.avgDayLogin(date);
-            retVal.put("date", date);
+            retVal = uMapper.avgDayLogin();
             retVal.put("is_success", true);
             
         }catch(Exception e) {
             retVal.put("totCnt", -999);
-            retVal.put("date", date);
             retVal.put("is_success", false);
         }
         

@@ -23,11 +23,9 @@
         where left(ri.createDate, 6) = #{date};
     </select>
     
-    <select id="avgDayLogin" parameterType="string" resultType="hashMap">
+    <select id="avgDayLogin" resultType="hashMap">
         select round(avg(cnt)) as totCnt
-        from (select count(*) cnt, left(ri.createDate, 6) createDay from statistc.requestinfo ri group by createDay) temp
-        where createDay = #{date}
-        group by createDay;
+        from (select count(*) cnt, left(ri.createDate, 6) createDay from statistc.requestinfo ri group by createDay) temp;
     </select>
     
     <select id="selectDeptMonthLogin" parameterType="string" resultType="hashMap">
